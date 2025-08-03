@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+
+  body {
+    background: linear-gradient(to right, #0f1c3f, #aa8735);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  
+  .container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2em;
+  }
+  
+  .launch-text {
+    margin-top: 30px;
+    color: #ffc107;
+  }
+  
+  .footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #ddd;
+  }
+  
+  /* Pulse animation */
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+  
+  /* Floating box animation */
+  @keyframes floatBox {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(-150vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  /* Box container */
+  .box-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .box-icon {
+    position: absolute;
+    opacity: 0.8;
+    animation-name: floatBox;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  /* Different sizes and faster speeds */
+  .box-icon.xsmall {
+    width: 20px;
+    animation-duration: 8s;
+  }
+  
+  .box-icon.small {
+    width: 30px;
+    animation-duration: 9s;
+  }
+  
+  .box-icon.medium {
+    width: 45px;
+    animation-duration: 10s;
+  }
+  
+  .box-icon.large {
+    width: 60px;
+    animation-duration: 11s;
+  }
+  
+  .box-icon.xlarge {
+    width: 80px;
+    animation-duration: 12s;
+  }
+  
+  /* Random positions */
+  .box-icon:nth-child(1) { left: 5%; top: 100%; }
+  .box-icon:nth-child(2) { left: 15%; top: 110%; }
+  .box-icon:nth-child(3) { left: 25%; top: 120%; }
+  .box-icon:nth-child(4) { left: 40%; top: 130%; }
+  .box-icon:nth-child(5) { left: 55%; top: 115%; }
+  .box-icon:nth-child(6) { left: 65%; top: 105%; }
+  .box-icon:nth-child(7) { left: 75%; top: 125%; }
+  .box-icon:nth-child(8) { left: 85%; top: 100%; }
+  .box-icon:nth-child(9) { left: 95%; top: 110%; }
+  

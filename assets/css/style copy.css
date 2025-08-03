@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #0f1c3f, #aa8735);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Floating Box Animation */
+  .floating-boxes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .float-box {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    animation: floatBox 15s linear infinite;
+    opacity: 0.9;
+  }
+
+  
+  /* Randomized floats */
+  .float-box:nth-child(1) { left: 10%; animation-duration: 20s; top: 110%; }
+  .float-box:nth-child(2) { left: 25%; animation-duration: 22s; top: 120%; }
+  .float-box:nth-child(3) { left: 40%; animation-duration: 18s; top: 130%; }
+  .float-box:nth-child(4) { left: 55%; animation-duration: 24s; top: 115%; }
+  .float-box:nth-child(5) { left: 70%; animation-duration: 19s; top: 125%; }
+  .float-box:nth-child(6) { left: 85%; animation-duration: 21s; top: 128%; }
+  .float-box:nth-child(7) { left: 15%; animation-duration: 23s; top: 135%; }
+  .float-box:nth-child(8) { left: 35%; animation-duration: 20s; top: 140%; }
+  .float-box:nth-child(9) { left: 60%; animation-duration: 22s; top: 118%; }
+  .float-box:nth-child(10) { left: 80%; animation-duration: 19s; top: 122%; }
+  
+  @keyframes floatBox {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-150vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2em;
+  }
+  
+  .launch-text {
+    margin-top: 30px;
+    color: #ffc107;
+  }
+  
+  .footer {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #ddd;
+  }
+  
